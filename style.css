@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.container{
+width: 40vw;
+height:70vh;
+border-radius: 5px;
+margin:auto;
+margin-top: 15vh;
+perspective: 1100px;
+}
+
+.upper_rect{
+    width:50vw;
+    height:50vh;
+   background-image:linear-gradient(to top,white,rgb(153, 167, 250));
+}
+
+.lower_rect{
+    margin:0;
+    width:50vw;
+    height:20vh;
+    background-image:linear-gradient(to top,black,rgb(182, 140, 51));
+}
+
+.bounce{
+    width:3vw;
+    height:3vw;
+    background-image:linear-gradient(to bottom,rgb(27, 23, 78),rgb(4, 95, 91));
+    border-radius: 50%;
+    margin-top: -7.5%;
+    animation-name: bouncy;
+    animation-iteration-count:infinite;
+    animation-direction: normal; 
+    animation-timing-function:linear;
+    animation-duration: 2s;
+}
+
+@keyframes bouncy{
+/****************************************** First bounce  ********************************/
+ 0%{
+        transform: translateX(100vh)  translateY(-30vh);
+    }
+
+    7%{
+         transform: translateX(85vh)  translateY(-15vh);
+    }
+        14%{
+         transform:translateX(80vh)  translateY(0vh) ;
+   
+       }
+/****************************************** second bounce  ********************************/
+/**************** Upside  ***************/
+        21%{
+         transform: translateX(70vh) translateY(-10vh);
+       }
+28%{
+         transform: translate(66) translateY(-13vh);
+
+}
+35%{
+    transform: translateX(60vh) translateY(-20vh);
+}
+
+/**************** Down side  ***************/
+       42%{ 
+   transform: translateX(53vh) translateY(-23vh);
+}
+
+49%{
+transform: translateX(48vh) translateY(-20vh);
+}
+
+          56%{
+         transform:  translateX(40vh) translateY(0vh);
+       }
+/******************************************Third bounce  ********************************/
+/**************** Upside  ***************/
+63%{
+transform:  translateX(30vh) translateY(-5vh);
+}
+70%{
+transform:  translateX(25vh) translateY(-10vh);
+}
+       77%{
+         transform: translateX(18vh) translateY(-12vh) ;
+       }
+
+
+/**************** Down side  ***************/
+
+
+84%{
+transform:  translateX(12vh) translateY(-10vh);
+}
+91%{
+transform:  translateX(7vh) translateY(-5vh);
+}
+       98%{
+         transform: translateX(2vh) translateY(0vh) ;
+       }
+/******************************************************************************/
+/******************************************Third bounce  ********************************/
+100%{
+ transform: translateX(0vh) translateY(-3vh) ;
+}
+}
